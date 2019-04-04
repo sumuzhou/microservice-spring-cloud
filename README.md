@@ -3,7 +3,7 @@
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 基于Spring Cloud构建微服务的简单教程
 
-#### 难得闲暇，写写文章
+*难得闲暇，写写文章*
 
 ## 写在前面
 本文绝大部分材料来源于[SivaLabs的文章](https://sivalabs.in/2018/03/microservices-using-springboot-spring-cloud-part-1-overview/)，感谢作者的分享，主要在下述方面有所区别：
@@ -27,3 +27,5 @@
 - 我的团队规模/能力是否足以支撑微服务架构，特别是运维团队
 - 我的整个系统是否有足够的理由要拆分成独立服务，比如独立的迭代周期、明确的责任边界、差异较大的伸缩能力要求
 - 我想要的系统是AP还是CP的
+
+SpringBoot并非为微服务而生，SpringBoot定位于BUILD ANYTHING，帮助开发者快速搭建应用；SpringCloud定位于COORDINATE ANYTHING，提供一系列工具在SpringBoot的基础上构建微服务。值得注意的是，SpringCloud提供的部分基于Netflix OSS的工具，其项目本身已经进入到了维护状态。技术发展日新月异，没有唯一的准则，适合自己的，就是最好的。
