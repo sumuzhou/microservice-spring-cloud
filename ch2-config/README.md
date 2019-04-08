@@ -189,7 +189,7 @@ export VAULT_ADDR='http://0.0.0.0:8200'
 echo 's.lQSXNLRbbZbDQ0qwQpA9qbNc' > ~/.vault-token
 vault kv put secret/catalog-service spring.datasource.username=root spring.datasource.password=222222
 ```
-上述的echo将生成的Root Token写入到~/.vault-token文件中，否则会报missing client token的错误，详见[issues-657](https://github.com/hashicorp/vault/issues/657#issuecomment-237364100)；然后通过kv put命令将对应的配置项写入到Vault中。
+上述的echo将生成的Root Token写入到~/.vault-token文件中，否则会报missing client token的错误，详见[issues-657](https://github.com/hashicorp/vault/issues/657#issuecomment-237364100)；然后通过kv put命令将对应的配置项写入到Vault中，写入的路径以secret/开头，后面的名称和spring.application.name对应。
 
 最后修改catalog-service的bootstrap.properties，加入如下配置：
 ```
