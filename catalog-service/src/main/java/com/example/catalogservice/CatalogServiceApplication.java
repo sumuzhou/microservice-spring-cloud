@@ -10,12 +10,12 @@ import org.springframework.web.client.RestTemplate;
 @EnableCircuitBreaker
 @SpringBootApplication
 public class CatalogServiceApplication {
-	
+
 	@Bean
-    @LoadBalanced
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
-    }
+  @LoadBalanced
+  public RestTemplate restTemplate() {
+    return new RestTemplate();
+  }
 
 	public static void main(String[] args) {
 		SpringApplication.run(CatalogServiceApplication.class, args);

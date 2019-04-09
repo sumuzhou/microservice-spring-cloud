@@ -202,5 +202,5 @@ spring.cloud.vault.token=s.cIwe6aLokLJrNLn1qj0MvXWb
 ```
 其中spring.cloud.vault.token就是Vault生成的Root Token。
 
-# 总结
-依次启动config-server和catalog-service，访问localhost:8181/api/products，即可看到产品信息。
+## 总结
+依次启动config-server和catalog-service，访问[http://localhost:8181/api/products](http://localhost:8181/api/products)，即可看到产品信息。
