@@ -107,8 +107,8 @@ server.port=8788
 ```
 启动工程，从[http://localhost:8788/hystrix](http://localhost:8788/hystrix )进入到Dashboard，在中间地址栏输入[http://localhost:8181/actuator/hystrix.stream](http://localhost:8181/actuator/hystrix.stream)，然后点击Monitor Stream即可。
 
-![Dashboard截图]( "Dashboard截图")
+![Dashboard截图](https://github.com/sumuzhou/microservice-spring-cloud/blob/add_ch4/ch4-circuit/20190409145010.png "Dashboard截图")
 
 图中左上方波形图旁边的数字，上面代表成功调用次数，中间代表断路保护次数，下面代表失败调用次数。
 
-Spring Cloud提供的Dashboard也存在问题，一次只能看一个服务的Hystrix命令运行状况。我们可以使用Turbine提供一个统一的视图，查看所有服务的状况。欲了解详情请移步[http://cloud.spring.io/spring-cloud-static/Finchley.M7/single/spring-cloud.html#_turbine]( http://cloud.spring.io/spring-cloud-static/Finchley.M7/single/spring-cloud.html#_turbine)。
+Spring Cloud提供的Dashboard也存在问题，一次只能看一个服务的Hystrix命令运行状况。我们可以使用Turbine提供一个统一的视图，查看所有服务的状况。欲了解详情请移步[http://cloud.spring.io/spring-cloud-static/Greenwich.SR1/single/spring-cloud.html#_turbine]( http://cloud.spring.io/spring-cloud-static/Greenwich.SR1/single/spring-cloud.html#_turbine)。
