@@ -109,6 +109,6 @@ server.port=8788
 
 ![Dashboard截图](https://github.com/sumuzhou/microservice-spring-cloud/blob/add_ch4/ch4-circuit/20190409145010.png "Dashboard截图")
 
-图中左上方波形图旁边的数字，上面代表成功调用次数，中间代表断路保护次数，下面代表失败调用次数。
+图中左上方波形图旁边的数字，上面代表成功调用次数，中间代表断路保护次数，下面代表失败调用次数。停止inventory-service服务，然后频繁调用catalog-service接口，开始的几次调用会等待一段时间（也就是超时时间），后面的调用会直接返回，此时在监控页面可发现断路保护已打开，调用走的都是回退逻辑。
 
 Spring Cloud提供的Dashboard也存在问题，一次只能看一个服务的Hystrix命令运行状况。我们可以使用Turbine提供一个统一的视图，查看所有服务的状况。欲了解详情请移步[http://cloud.spring.io/spring-cloud-static/Greenwich.SR1/single/spring-cloud.html#_turbine]( http://cloud.spring.io/spring-cloud-static/Greenwich.SR1/single/spring-cloud.html#_turbine)。
