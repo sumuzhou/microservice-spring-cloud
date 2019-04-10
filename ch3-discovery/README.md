@@ -262,7 +262,7 @@ public class ProductService {
 	}
 }
 ```
-此时查询产品[http://localhost:8181/api/product/P001](http://localhost:8181/api/product/P001)，就能看到调用了inventory-service的接口。可尝试手动增加inventory-service实例（注意端口不要冲突），观察负载均衡现象。
+此时查询产品[http://localhost:8181/api/products/P001](http://localhost:8181/api/products/P001)，就能看到调用了inventory-service的接口。可尝试手动增加inventory-service实例（注意端口不要冲突），观察负载均衡现象。
 
 ## 总结
 通过Spring Cloud提供的服务注册与发现机制，妈妈再也不用担心我的调用了。:smile:
