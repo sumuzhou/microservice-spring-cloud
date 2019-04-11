@@ -55,4 +55,4 @@ zuul.routes.catalogservice.serviceId=catalog-service
 ```
 上述配置中，zuul.ignored-services默认忽略所有的服务，除了下面手动定义的；zuul.routes定义了catalog服务，说明了其逻辑ID是catalog-service，并指定前缀路径是/catalog。如此所有前缀为/catalog的请求都会被转发至逻辑ID为catalog-service的地址上。网关借助Eureka服务发现机制，将剥离前缀后的请求转发过去。
 
-保持catalog服务、注册服务和配置服务为运行状态，启动网关服务，访问[http://localhost:8080/catalog/api/products](http://localhost:8080/catalog/api/products)，即可看到产品信息。
+保持catalog服务、注册服务和配置服务为运行状态，启动网关服务，访问[http://localhost:8080/catalog/api/products](http://localhost:8080/catalog/api/products)，即可看到产品信息。*在第一次调用时可能看到如下错误：2019-04-11 13:43:28.243 ERROR [catalog-service,780adc8bd502f9b9,780adc8bd502f9b9,true] 12816 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [46d225cf] Error [java.io.IOException: 你的主机中的软件中止了一个已建立的连接。] for HTTP GET "/api/products/P001", but ServerHttpResponse already committed (200 OK)，这个可能和[Webflux使用了Undertow有关](https://github.com/spring-projects/spring-framework/issues/22690)，未深入研究，不确定；再次请求即可。*
