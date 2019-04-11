@@ -107,7 +107,7 @@ server.port=8788
 ```
 启动工程，从[http://localhost:8788/hystrix](http://localhost:8788/hystrix )进入到Dashboard，在中间地址栏输入[http://localhost:8181/actuator/hystrix.stream](http://localhost:8181/actuator/hystrix.stream)，然后点击Monitor Stream即可。
 
-![Dashboard截图](https://github.com/sumuzhou/microservice-spring-cloud/blob/add_ch4/ch4-circuit/20190409145010.png "Dashboard截图")
+![Dashboard截图](https://github.com/sumuzhou/microservice-spring-cloud/blob/master/ch4-circuit/20190409145010.png "Dashboard截图")
 
 图中左上方波形图旁边的数字，上面代表成功调用次数，中间代表断路保护次数，下面代表失败调用次数。停止inventory-service服务，然后频繁调用catalog-service接口，开始的几次调用会等待一段时间（也就是超时时间），后面的调用会直接返回，此时在监控页面可发现断路保护已打开，调用走的都是回退逻辑。
 
