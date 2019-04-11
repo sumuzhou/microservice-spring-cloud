@@ -60,14 +60,14 @@ spring.sleuth.sampler.probability用于设置追踪信息上传的百分比，�
 
 进入[Zipkin UI](http://localhost:9411/zipkin/)，调用一次[http://localhost:8181/api/products/P001](http://localhost:8181/api/products/P001)，点击查找，就能看到刚才的调用情况：
 
-![Zipkin查找]( "Zipkin查找")
+![Zipkin查找](https://github.com/sumuzhou/microservice-spring-cloud/blob/master/ch6-tracing/20190411105837.png "Zipkin查找")
 
 点击可进入查看调用链的详情：
 
-![Zipkin调用链]( "Zipkin调用链")
+![Zipkin调用链](https://github.com/sumuzhou/microservice-spring-cloud/blob/master/ch6-tracing/20190411105923.png "Zipkin调用链")
 
 点击单次调用可查看详情：
 
-![Zipkin单次调用]( "Zipkin单次调用")
+![Zipkin单次调用](https://github.com/sumuzhou/microservice-spring-cloud/blob/master/ch6-tracing/20190411105953.png "Zipkin单次调用")
 
 这些信息在Debug时对我们很有帮助，再也不用盯着日志老眼昏花了。
